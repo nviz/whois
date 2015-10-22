@@ -23,7 +23,7 @@ class Client
     {
         return $this
             ->resolveWhoisServer($domain)
-            ->then(Partial::bind(array($this, 'queryWhoisServer'), $domain));
+            ->then(Partial\bind(array($this, 'queryWhoisServer'), $domain));
     }
 
     public function resolveWhoisServer($domain)
