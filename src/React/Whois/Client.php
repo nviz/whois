@@ -3,7 +3,7 @@
 namespace React\Whois;
 
 use React\Promise\Deferred;
-use React\Curry\Util as Curry;
+use React\Partial as Partial;
 use React\Dns\Resolver\Resolver;
 use React\Stream\ReadableStreamInterface;
 use React\Stream\BufferedSink;
@@ -23,7 +23,7 @@ class Client
     {
         return $this
             ->resolveWhoisServer($domain)
-            ->then(Curry::bind(array($this, 'queryWhoisServer'), $domain));
+            ->then(Partial::bind(array($this, 'queryWhoisServer'), $domain));
     }
 
     public function resolveWhoisServer($domain)
