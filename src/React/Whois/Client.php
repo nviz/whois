@@ -3,7 +3,7 @@
 namespace React\Whois;
 
 use React\Promise\Deferred;
-use React\Partial as Partial;
+use React\Partial;
 use React\Dns\Resolver\Resolver;
 use React\Stream\ReadableStreamInterface;
 use React\Stream\BufferedSink;
